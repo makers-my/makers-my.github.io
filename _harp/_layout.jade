@@ -2,5 +2,17 @@ doctype
 html
   head
     link(rel="stylesheet" href="/main.css")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto")
+    script(src="main.js")
   body
+    .navbar
+      ul  
+        li.brand: a(href="/")
+          img(src="makers.svg")
+        //li: a(href="/about") About
+        li: a(href="/contact") Contact
+    
     != yield
+    
+    #footer
+      p &copy; 2017 MAKE.RS. All rights reserved.
