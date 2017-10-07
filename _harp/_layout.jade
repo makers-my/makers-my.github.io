@@ -2,17 +2,18 @@ doctype
 html
   head
     link(rel="stylesheet" href="/main.css")
-    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
     script(src="main.js")
   body
     .navbar
       ul  
         li.brand: a(href="/")
           img(src="makers.svg")
-        //li: a(href="/about") About
-        li: a(href="/contact") Contact
+        li.scroll: a(href="#about") About
+        li.scroll: a(href="#what") Work
+        li.scroll: a(href="#contact") Contact
     
     != yield
-    
+
     #footer
       p &copy; 2017 MAKE.RS. All rights reserved.

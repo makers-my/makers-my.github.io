@@ -53,4 +53,11 @@ window.onload = function() {
     css.type = "text/css";
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #d5a480}";
     document.body.appendChild(css);
+    $(".navbar").find("a").click(function(e) {
+        e.preventDefault();
+        var section = $(this).attr("href");
+        $("html, body").animate({
+            scrollTop: $(section).offset().top
+        });
+    });
 };
